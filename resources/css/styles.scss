@@ -72,6 +72,7 @@ $fgColor: rgb(30, 44, 105);
     @extend %globalDimensions;     
     
     &-background {   
+    @media only screen and (max-width: 480px) {
         background: url(../images/bg-mobile.svg);
         height: 100%;
         width: 100%;
@@ -79,6 +80,7 @@ $fgColor: rgb(30, 44, 105);
         position: fixed;
         top: 0;
         left: 0;
+    }
     @media only screen and (min-width: 900px) {
         position: fixed;
         bottom: 0;

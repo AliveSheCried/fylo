@@ -53,14 +53,16 @@ body {
 /* ======================================== */
 /* 3. Structure Styles
 ============================================ */
-.Container-background {
-  background: url(../images/bg-mobile.svg);
-  height: 100%;
-  width: 100%;
-  z-index: -10;
-  position: fixed;
-  top: 0;
-  left: 0;
+@media only screen and (max-width: 480px) {
+  .Container-background {
+    background: url(../images/bg-mobile.svg);
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media only screen and (min-width: 900px) {
