@@ -1,14 +1,16 @@
 /* Variables, extendors & mixins */
-html, body {
+html, body, .Container {
   height: 100%;
+  width: 100%;
+}
+
+html {
   margin: 0 auto;
   overflow-x: hidden;
-  width: 100%;
 }
 
 .Grid-two, .Grid-three, .Grid-four {
   background-color: #0c122c;
-  border-radius: 8px;
   height: 40px;
   text-align: center;
   display: -webkit-box;
@@ -20,15 +22,11 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-/*======================================== */
-/* Site Stylesheet
-  1. Global Styles
-  2. Typography Styles
-  3. Structure Styles
-  4. Module Styles
-  5. Component Styles
+/*
 ======================================== */
 /* 1. Global Styles
 ======================================== */
@@ -45,8 +43,8 @@ html {
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: #0c122c;
   color: #ffffff;
+  background: #0c122c;
 }
 
 /* ======================================== */
@@ -55,6 +53,46 @@ body {
 /* ======================================== */
 /* 3. Structure Styles
 ============================================ */
+.Container-background {
+  background: url(../images/bg-mobile.svg);
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (min-width: 900px) {
+  .Container-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 420px;
+    width: 100%;
+    background: url(../images/bg-desktop.svg) bottom no-repeat;
+    border-top-left-radius: 200px;
+    z-index: -10;
+  }
+}
+
+.Container-content {
+  z-index: 99;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* Left box - using grid */
 .Grid {
   display: -ms-inline-grid;
   display: inline-grid;
@@ -63,9 +101,9 @@ body {
   grid-gap: 20px;
   background-color: #1e2c69;
   padding: 40px 120px 40px 40px;
+  max-width: 280px;
   border-radius: 10px;
   border-top-right-radius: 100px;
-  max-width: 320px;
 }
 
 .Grid-one {
@@ -100,10 +138,5 @@ body {
   grid-row: 2;
 }
 
-/* ======================================== */
-/* 4. Module Styles
-============================================ */
-/* ======================================== */
-/* 5. Component Styles
-============================================ */
+/* Right box - using ? */
 /*# sourceMappingURL=styles.css.map */
