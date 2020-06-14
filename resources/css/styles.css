@@ -1,0 +1,109 @@
+/* Variables, extendors & mixins */
+html, body {
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.Grid-two, .Grid-three, .Grid-four {
+  background-color: #0c122c;
+  border-radius: 8px;
+  height: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*======================================== */
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+======================================== */
+/* 1. Global Styles
+======================================== */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0c122c;
+  color: #ffffff;
+}
+
+/* ======================================== */
+/* 2. Typography Styles
+============================================ */
+/* ======================================== */
+/* 3. Structure Styles
+============================================ */
+.Grid {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: (40px)[3];
+      grid-template-columns: repeat(3, 40px);
+  grid-gap: 20px;
+  background-color: #1e2c69;
+  padding: 40px 120px 40px 40px;
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+  max-width: 320px;
+}
+
+.Grid-one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.Grid-two {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.Grid-three {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.Grid-four {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+/* ======================================== */
+/* 4. Module Styles
+============================================ */
+/* ======================================== */
+/* 5. Component Styles
+============================================ */
+/*# sourceMappingURL=styles.css.map */
