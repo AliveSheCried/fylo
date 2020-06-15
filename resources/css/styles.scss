@@ -1,6 +1,7 @@
 /* Variables, extendors & mixins */
 $bgColor: rgb(12, 18, 44);
 $fgColor: rgb(30, 44, 105);
+$rmColor: #ffffff;
 
 
 @mixin borderRadius ($std, $topRight) {
@@ -165,7 +166,7 @@ $fgColor: rgb(30, 44, 105);
         background-color: $bgColor;
         height: 1.2rem;
         @include borderRadius(10px, 10px);
-        margin-top: 1rem;;
+        margin-top: 1rem;
 
         &--fill {
             @include borderRadius(10px, 10px);
@@ -184,7 +185,44 @@ $fgColor: rgb(30, 44, 105);
             height: 10px;
             margin: 2px;
         }
+
+        &-limits {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.7rem;
+
+            &--units {
+                font-size: 0.7rem;
+                padding-bottom: 30px;
+            }
+        }    
+    }    
+}
+
+.Remaining {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include borderRadius(10px, 10px);
+    text-align: center;
+    background-color: $rmColor;
+    width: 50%;
+    height: 4rem;
+    margin-top: -2rem;
+    
+    &-amount {
+        color: #000000;
+        font-size: 2rem;
+        font-weight: bold;
     }
+
+    &-unit {
+        color: gray;
+        font-weight: bold;
+        font-size: 0.7rem;
+        padding-left: 5px;
+    }
+
 }
 
  
