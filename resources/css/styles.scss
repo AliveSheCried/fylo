@@ -25,7 +25,7 @@ $fgColor: rgb(30, 44, 105);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include borderRadius(10px, 10px)
+    @include borderRadius(10px, 10px);
        
 }
 
@@ -52,7 +52,8 @@ $fgColor: rgb(30, 44, 105);
     -webkit-font-smoothing: antialiased;
     color: #ffffff;
     background: $bgColor;
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
   }
 
  /* ======================================== */
@@ -87,7 +88,8 @@ $fgColor: rgb(30, 44, 105);
         left: 0;
         height: 420px;
         width: 100%;
-        background: url(../images/bg-desktop.svg) bottom no-repeat;       
+        background: url(../images/bg-desktop.svg) bottom;  
+        background-repeat: repeat-x;       
         border-top-left-radius: 200px;
         z-index: -10;
        }
@@ -99,6 +101,7 @@ $fgColor: rgb(30, 44, 105);
         display: flex;
         justify-content: center;
         align-items: center;
+        align-content: center;
         flex-wrap: wrap;
     }
     
@@ -116,7 +119,7 @@ $fgColor: rgb(30, 44, 105);
     background-color: $fgColor;
     padding: 40px 120px 40px 40px;    
     max-width: 280px;
-    @include borderRadius(10px, 100px)
+    @include borderRadius(10px, 100px);
     
 
     &-one {
@@ -147,6 +150,41 @@ $fgColor: rgb(30, 44, 105);
 }
 
 /* Right box - using ? */
+.Status {
+    background-color: $fgColor;
+    display: flex;
+    padding: 30px 20px 30px 30px;
+    @include borderRadius(10px, 10px);
+    @media only screen and (max-width: 480px) {
+        flex-direction: column;
+        width: 280px;  
+        margin-top: 1rem;     
+    }
 
+    &-bar {
+        background-color: $bgColor;
+        height: 1.2rem;
+        @include borderRadius(10px, 10px);
+        margin-top: 1rem;;
+
+        &--fill {
+            @include borderRadius(10px, 10px);
+            background: linear-gradient(90deg,#fea095, #fa4c90);
+            border: 3px solid $bgColor;
+            display: flex;
+            justify-content: flex-end;
+            max-width: 70%;
+            
+        }
+
+        &--circle {
+            @include borderRadius(10px, 10px);
+            background-color: #ffffff;
+            width: 10px;
+            height: 10px;
+            margin: 2px;
+        }
+    }
+}
 
  
