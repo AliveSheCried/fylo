@@ -101,7 +101,7 @@ $rmColor: #ffffff;
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         align-content: center;
         flex-wrap: wrap;
     }
@@ -114,6 +114,9 @@ $rmColor: #ffffff;
 /* Left box - using grid */
 
 .Grid {
+    @media only screen and (min-width: 900px) {
+        margin-left: 15px;
+    }
     display: inline-grid;
     grid-template-columns: repeat(3, 40px);
     grid-gap: 20px;
@@ -154,12 +157,19 @@ $rmColor: #ffffff;
 .Status {
     background-color: $fgColor;
     display: flex;
+    flex-direction: column;
     padding: 30px 20px 30px 30px;
     @include borderRadius(10px, 10px);
     @media only screen and (max-width: 480px) {
-        flex-direction: column;
+        
         width: 280px;  
         margin-top: 1rem;     
+    }
+
+    @media only screen and (min-width: 900px) {
+        margin-left: 35px;
+        height: 140px;
+        width: 500px;
     }
 
     &-bar {
@@ -206,10 +216,28 @@ $rmColor: #ffffff;
     @include borderRadius(10px, 10px);
     text-align: center;
     background-color: $rmColor;
-    width: 50%;
+    width: 160px;
     height: 4rem;
     margin-top: -2rem;
+    z-index: 99;
+
     
+
+    @media only screen and (min-width: 900px) {
+        position: relative;
+        left: -190px;
+        top: -115px;
+
+        &::after {
+            border-right: 20px solid transparent;
+            border-top: 20px solid #ffffff;
+            bottom: -20px;
+            content: "";
+            position: absolute;
+            right: 10px;
+          }
+    }
+
     &-amount {
         color: #000000;
         font-size: 2rem;
